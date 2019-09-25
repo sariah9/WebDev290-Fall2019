@@ -1,0 +1,115 @@
+/******Base Styles*****/
+body {font-family: 'Crimson Text', serif;
+      font-size: 24px;
+      color: #ffffff;
+      background: #6c5f8c;}
+#about, #work, #contact, #blog {height:600px;
+                              text-decoration: none;}
+
+/******Grid*****/
+.full-width { width:1300px;
+              margin: 0 auto;}
+.half-width {width: 600px;
+            float: left;}
+.third-width {width: 400px;
+              float: left;}
+.right-side { width: 600px;
+            float: right;}
+
+/*****Header*****/
+header #banner {height: 150px;
+                background: #340f63;
+                background-size: auto;
+                border: 10px double #19ff57;}
+header #banner h1 {font-family: 'Dancing Script', cursive;
+        font-size: 80px;
+        color: #ffffff;
+        padding: 0px 40px 10px 40px;
+        margin: 10px auto;}
+nav {font-family: 'Cinzel Decorative', serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    }
+li {list-style: none;
+    display: inline-block;
+    }
+nav ul li a {text-decoration: none;
+            color: #ffffff;
+            margin: 5px;}
+header #interest {height: 750px;
+                  background: url('scroll.png') no-repeat;
+                  background-size: cover;}
+#interest h2 {font-family: 'Roboto Condensed', sans-serif;
+              font-size: 70px;
+              color: #19ff57;
+              padding: 150px 40px;}
+
+/*****About*****/
+main { height: 700px;
+      background: #6c5f8c;
+      padding: 200px;
+      border: 8px solid #19ff57;
+      }
+#about h3 {font-family: 'Crimson Text', serif;
+          font-size: 30px;
+          color: #ffffff;}
+#about h2 {font-family: 'Cinzel Decorative', cursive;
+          font-size: 30px;
+          color: #ffffff;}
+main #me img {margin: 0px 150px;}
+
+/*****Work*****/
+article {height: 1250px;
+        background: url('squid.png') no-repeat;
+        background-size: cover;
+        border: 5px solid #516e73;
+        padding: 60px;}
+article h2 {font-family: 'Cinzel Decorative', serif;
+            font-size: 35px;
+            margin: 40px;
+            text-align:center;}
+article h4 {font-family: 'Crimson Text', serif;
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;
+	margin: 20px 10px 20px 100px;}
+#work img {border: 5px solid #19ff57;
+          height: 200px;
+          width: 200px;
+          align: center;
+	margin: 0px 0px 0px 150px;}
+
+/*****Blog*****/
+#blog img {border: 5px solid #19ff57;
+          height: 200px;
+          width: 200px;
+          align: center;
+	margin: 0px 0px 0px 150px;}
+
+/*****Contact*****/
+aside {height: 220px;
+      border: 12px solid #516e73;}
+#contact h3 {font-family: 'Roboto Condensed', sans-serif;
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;}
+#contact h2 {font-family:'Cinzel Decorative', serif;
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;}
+#contact span {font-family: 'Crimson Text', serif;
+              font-size: 30px;
+              color: #ffffff;}
+#contact p {font-family: 'Crimson Text', serif;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;}
+
+
+/*****Footer*****/
+footer {height: 300px;
+	background: #340f63;
+        border: 10px solid #19ff57;}
+#socialmedia ul li { display: inline-block;
+}

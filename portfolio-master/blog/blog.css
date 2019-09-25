@@ -1,0 +1,82 @@
+/*****Base Styles*****/
+body {background: url('img/workspread.png');
+      background-size: contain;
+      font-family: 'Roboto Condensed', serif;
+      font-size: 30px;
+      color: #000000;}
+
+.full-width { width:1300px;
+                    margin: 0 auto;}
+.half-width {width: 600px;
+                  float: left;}
+.third-width {width: 400px;
+                    float: left;}
+.right-side { width: 600px;
+                  float: right;}
+
+/*****Title*****/
+header {height: 200px;
+        background: #340f63;
+      background-size: cover;
+      border: 5px solid #19ff57;}
+header h1 { font-family: 'Crimson Text', serif;
+          text-transform:uppercase;
+            font-size: 60px;
+            text-align: center;
+            color: #ffffff;
+          padding: 0px 20px 10px 0px;
+        margin: 10px;}
+header h3 {font-family: 'Robot Condensed', sans-serif;
+          color: #ffffff;
+          text-align:center;}
+
+/*****Blog*****/
+main {height: 11000px;
+      width: 1200px;
+    margin: 0px 150px 0px 200px;
+    background: #c3acfc;
+    padding: 140px;}
+main h2 { font-family:'Cinzel Decorative', serif;
+        font-size: 40px;
+        color: #000000;
+        text-align: center;
+      padding: 100px 60px 0px 0px;
+      }
+main h3 {font-family: 'Roboto Condensed', sans-serif;
+          padding: 0px 80px 0px 0px;
+          text-align:center;
+        color: #000000;}
+main h4 {font-family: 'Cinzel Decorative', serif;
+        font-size: 25px;
+        padding: 0px 0px 0px 80px;}
+main p {font-family: 'Crimson Text', serif;
+        color: #000000;
+      font-size: 18px;
+      color: #000000;
+        text-align: center;
+        width: 1000px;
+      padding: 0px 0px 0px 80px;}
+main .photo p {font-family:'Crimson Text'. serif;
+              font-size: 18px;
+              text-align: center;
+              margin: 200px 0px;}
+main span {font-weight: bold;}
+main img {height:500px;
+          width: 500px;
+        margin: 0px 100px 0px 350px;}
+
+/*****portfolio*****/
+article {height: 0px;}
+
+
+/***** early work*****/
+aside {height: 0px;}
+
+
+
+/*****footer*****/
+footer {background: #6c5f8c;
+border: 10px solid #19ff57;}
+footer ul li { display: inline-block;
+}
+
