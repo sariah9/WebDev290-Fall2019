@@ -6,9 +6,7 @@ caption {
 }
 
 table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
+     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
 }
@@ -28,9 +26,12 @@ td {
 }
 
 tr:nth-child(even) td {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(144, 238, 144);
 }
 
 tr:nth-child(odd) td {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 192, 203);
+}
+ tfoot {
+     background-color: rgb(235, 235, 235);
 }
