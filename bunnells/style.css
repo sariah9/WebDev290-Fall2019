@@ -35,3 +35,15 @@ tr:nth-child(odd) td {
  tfoot {
      background-color: rgb(235, 235, 235);
 }
+div.outer-content { 
+    background-color:pink;
+    width:3/4;
+    padding:20px;
+    align: left;
+}
+div.inner-content { 
+    background-color:light blue;
+    width:300px;
+    height:100px;
+    align: left;
+}
