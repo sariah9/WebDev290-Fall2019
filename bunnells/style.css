@@ -45,6 +45,7 @@ div.outer-content {
 
 div.inner-content { 
     background-color:blue;
+    width: 3/4;
     padding:20px;
     text-align: center;
 }
