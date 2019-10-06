@@ -1,82 +1,51 @@
 //style.css
-
 caption {
-
     text-align: center;
-
     padding: 40;
-
     caption-side: top;
-
 }
 
 table {
-
      letter-spacing: 1px;
-
     font-family: sans-serif;
-
     font-size: .8rem;
-
 }
 
 td,
-
 th {
-
     border: 1px solid rgb(190, 190, 190);
-
     padding: 7px 5px;
-
 }
 
 th {
-
     background-color: rgb(235, 235, 235);
-
 }
 
 td {
-
     text-align: center;
-
 }
 
 tr:nth-child(even) td {
-
     background-color: rgb(144, 238, 144);
-
 }
 
-
 tr:nth-child(odd) td {
-
     background-color: rgb(255, 192, 203);
-
 }
 
  tfoot {
-
      background-color: rgb(235, 235, 235);
-
 }
 
 div.outer-content { 
-
     background-color:pink;
-
     width:3/4;
-
     padding:20px;
-
     text-align: left;
-
 }
 
 div.inner-content { 
-
     background-color:blue;
-
     padding:20px;
-
+    text-align: center;
 }
