@@ -79,37 +79,48 @@
     </div>
       <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="get" class="form-get">
           <div class="form-get">
-              Text here:<br>
+              <label for="text_input">Text here: </label>
               <input type="text" name="text_input"><br>
           </div>
           <div class="form-get">
-               Number here:<br>
+              <label for="numerical_input">Number here: </label>
               <input type="number" name="numerical_input"><br>
           </div>
            <div class="form-get">
-               Password here:<br>
+              <label for="password_input">Password here: </label>
               <input type="password" name="password_input"><br>
           </div>
           <div class="form-get">
+              <label for="candy">Select between: </label>
               <input type="radio" name="candy" value="snickers" checked> Snickers<br>
               <input type="radio" name="candy" value="skittles"> Skittles<br>
               <input type="radio" name="candy" value="mentos"> Mentos
           </div>
           <div class="form-get">
-              <input type="submit" value="Subscribe!">
+              <input type="submit" value="Submit">
           </div>
       </form>
       <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post" class="form-post">
           <div class="form-post">
-              <label for="name">Enter your name: </label>
-              <input type="text" name="name" id="name" required>
+              <label for="text_input">Text here: </label>
+              <input type="text" name="text_input"><br>
           </div>
           <div class="form-post">
-              <label for="email">Enter your email: </label>
-              <input type="email" name="email" id="email" required>
+              <label for="numerical_input">Number here: </label>
+              <input type="number" name="numerical_input"><br>
+          </div>
+           <div class="form-post">
+              <label for="password_input">Password here: </label>
+              <input type="password" name="password_input"><br>
           </div>
           <div class="form-post">
-              <input type="submit" value="Subscribe!">
+              <label for="candy">Select between: </label>
+              <input type="radio" name="candy" value="snickers" checked> Snickers<br>
+              <input type="radio" name="candy" value="skittles"> Skittles<br>
+              <input type="radio" name="candy" value="mentos"> Mentos
+          </div>
+          <div class="form-post">
+              <input type="submit" value="Submit">
           </div>
       </form>
   </body>
