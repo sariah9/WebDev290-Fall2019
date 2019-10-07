@@ -24,11 +24,11 @@ td {
     text-align: center;
 }
 
-tr:nth-child(even) td {
+tr.colors:nth-child(even) td {
     background-color: rgb(144, 238, 144);
 }
 
-tr:nth-child(odd) td {
+tr.colors:nth-child(odd) td {
     background-color: rgb(255, 192, 203);
 }
 
