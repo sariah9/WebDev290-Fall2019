@@ -5,7 +5,7 @@ caption {
 }
 
 table {
-     letter-spacing: 1px;
+    letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
 }
@@ -48,4 +48,24 @@ div.inner-content {
     width:75%;
     margin: auto;
     text-align: center;
+}
+
+caption.forms {
+    text-align: left;
+    padding: 40;
+    caption-side: top;
+}
+
+div.form-get {
+    background-color: rgb(190, 190, 190);
+    width:100%;
+    margin: auto;
+    text-align: left;
+}
+
+div.form-post {
+    background-color: rgb(190, 190, 190);
+    width:100%;
+    margin: auto;
+    text-align: left;
 }
