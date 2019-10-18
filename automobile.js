@@ -39,17 +39,19 @@ function exComparator( int1, int2){
 /*This compares two automobiles based on their year. Newer cars are "greater" than older cars.*/
 function yearComparator( auto1, auto2){
     /* your code here*/
-    sortArr(
+    exComparator(auto1.year, auto2.year);
 }
 
 /*This compares two automobiles based on their make. It should be case insensitive and makes which are alphabetically earlier in the alphabet are "greater" than ones that come later (from A-Z).*/
 function makeComparator( auto1, auto2){
     /* your code here*/
+    exComparator(auto1.make, auto2.make);
 }
 
 /*This compares two automobiles based on their type. The ordering from "greatest" to "least" is as follows: roadster, pickup, suv, wagon, (types not otherwise listed). It should be case insensitive. If two cars are of equal type then the newest one by model year should be considered "greater".*/
 function typeComparator( auto1, auto2){
     /* your code here*/
+    exComparator(auto1.type, auto2.type);
 }
 
 /*Your program should output the following to the console.log, including the opening and closing 5 stars. All values in parenthesis should be replaced with appropriate values. Each line is a seperate call to console.log.
