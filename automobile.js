@@ -86,14 +86,13 @@ function typeComparator( auto1, auto2){
 }
 
 /*Your program should output the following to the console.log, including the opening and closing 5 stars. All values in parenthesis should be replaced with appropriate values. Each line is a seperate call to console.log.*/
-console.log('*****');
-console.log('The cars sorted by year are:');
-console.log(sortArr(yearComparator, automobiles));
-console.log('The cars sorted by make are:');
-console.log(sortArr(makeComparator, automobiles));
-console.log('The cars sorted by type are:');
-console.log(sortArr(typeComparator, automobiles));
-console.log('*****');
+function logMe (expression){
+    if (expression){
+        console.log( year make model type);
+    } else {
+        console.log(year make model);
+    }
+}
 /*Each line representing a car should be produced via a logMe function. This function should be added to the Automobile class and accept a single boolean argument. If the argument is 'true' then it prints "year make model type" with the year, make, model and type being the values appropriate for the automobile. If the argument is 'false' then the type is ommited and just the "year make model" is logged.
 
 *****
@@ -115,3 +114,12 @@ The cars sorted by type are:
 
 As an example of the content in the parenthesis:
 1990 Ford F-150 */
+
+console.log('*****');
+console.log('The cars sorted by year are:');
+console.log(sortArr(yearComparator, automobiles));
+console.log('The cars sorted by make are:');
+console.log(sortArr(makeComparator, automobiles));
+console.log('The cars sorted by type are:');
+console.log(sortArr(typeComparator, automobiles));
+console.log('*****');
