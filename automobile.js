@@ -24,7 +24,7 @@ function sortArr( comparator, array ){
         while(!sorted) {
             sorted = true;
             for (int i = 0; i < array.length - 1; i++) {
-                if (comparator(array[i], array[i + 1]) == 1) {
+                if (comparator(array[i], array[i + 1])) {
                     temp = array[i];
                     array[i] = array[i+1];
                     array[i+1] = temp;
@@ -33,7 +33,8 @@ function sortArr( comparator, array ){
             }
         }
     }
-    //how to use comparator?
+    result.push(sort);
+    return result;
 }
 
 /*A comparator takes two arguments and uses some algorithm to compare them. If the first argument is larger or greater than the 2nd it returns true, otherwise it returns false. Here is an example that works on integers*/
@@ -87,11 +88,11 @@ function typeComparator( auto1, auto2){
 /*Your program should output the following to the console.log, including the opening and closing 5 stars. All values in parenthesis should be replaced with appropriate values. Each line is a seperate call to console.log.*/
 console.log('*****');
 console.log('The cars sorted by year are:');
-console.log();
+console.log(sortArr(yearComparator, automobiles));
 console.log('The cars sorted by make are:');
-console.log();
+console.log(sortArr(makeComparator, automobiles));
 console.log('The cars sorted by type are:');
-console.log();
+console.log(sortArr(typeComparator, automobiles));
 console.log('*****');
 /*Each line representing a car should be produced via a logMe function. This function should be added to the Automobile class and accept a single boolean argument. If the argument is 'true' then it prints "year make model type" with the year, make, model and type being the values appropriate for the automobile. If the argument is 'false' then the type is ommited and just the "year make model" is logged.
 
