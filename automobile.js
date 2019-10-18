@@ -19,7 +19,11 @@ function sortArr( comparator, array ){
     /*your code here*/
     for (let i = 0; i < array.length; i++) {
         let result = [];
-        let sort = comparator();
+        if (comparator(array[i], array[i + 1])){
+            let hold = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = hold;
+        }
         result.push(sort);
     }
     return result;
@@ -37,21 +41,41 @@ function exComparator( int1, int2){
 /*For all comparators if cars are 'tied' according to the comparison rules then the order of those 'tied' cars is not specified and either can come first*/
 
 /*This compares two automobiles based on their year. Newer cars are "greater" than older cars.*/
-function yearComparator( auto1, auto2){
+function yearComparator(auto1, auto2){
     /* your code here*/
-    exComparator(auto1.year, auto2.year);
+    automobiles.sortArr(function(auto1, auto2){return auto1.year - auto2.year});
 }
 
 /*This compares two automobiles based on their make. It should be case insensitive and makes which are alphabetically earlier in the alphabet are "greater" than ones that come later (from A-Z).*/
-function makeComparator( auto1, auto2){
+function makeComparator(auto1, auto2){
     /* your code here*/
-    exComparator(auto1.make, auto2.make);
+    automobiles.sortArr(function(auto1, auto2){
+        let x = auto1.make.toLowerCase();
+        let y = auto2.make.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+    });        
 }
 
 /*This compares two automobiles based on their type. The ordering from "greatest" to "least" is as follows: roadster, pickup, suv, wagon, (types not otherwise listed). It should be case insensitive. If two cars are of equal type then the newest one by model year should be considered "greater".*/
 function typeComparator( auto1, auto2){
     /* your code here*/
-    exComparator(auto1.type, auto2.type);
+    function order(n) {
+        if (n == 'roadster') { n = 4;}
+        else if (n == 'pickup'){n = 3;}
+        else if (n == 'suv'){n = 2;}
+        else if (n == 'wagon'){n = 1;}
+        else {n = 0;}
+        return n;
+    }
+    automobiles.sortArr(function(auto1, auto2){
+        let x = order(auto1.type.toLowerCase());
+        let y = order(auto2.type.toLowerCase());   
+        if (x < y) {return -1;}
+        else if (x > y) {return 1;}
+        else {yearComparator(x, y);return 0;}
+    });
 }
 
 /*Your program should output the following to the console.log, including the opening and closing 5 stars. All values in parenthesis should be replaced with appropriate values. Each line is a seperate call to console.log.
