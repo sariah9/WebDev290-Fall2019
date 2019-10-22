@@ -119,14 +119,14 @@ As an example of the content in the parenthesis:
 console.log('*****');
 console.log('The cars sorted by year are:');
 let yearArr =sortArr(yearComparator, automobiles);
-for(car of yearArr) {
-car.logMe(true);
+function output(carArray) {
+    for(car of carArr) {
+        car.logMe(true);
+    }
 }
-
+output(sortArr(yearComparator, automobiles));
 console.log('The cars sorted by make are:');
-sortArr(makeComparator, automobiles);
-automobiles.logMe(true);
+output(sortArr(makeComparator, automobiles));
 console.log('The cars sorted by type are:');
-sortArr(typeComparator, automobiles);
-automobiles.logMe(true);
+output(sortArr(typeComparator, automobiles));
 console.log('*****');
