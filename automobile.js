@@ -24,14 +24,13 @@ var automobiles = [
 /*This function sorts arrays using an arbitrary comparator. You pass it a comparator and an array of objects appropriate for that comparator and it will return a new array which is sorted with the largest object in index 0 and the smallest in the last index*/
 function sortArr( comparator, array ){
     /*your code here*/
-    let result = [];
     let sort = function(array){
         let sorted = false;
         let temp;
         while(!sorted) {
             sorted = true;
             for (let i = 0; i < array.length - 1; i++) {
-                if (comparator(array[i], array[i + 1])) {
+                if (comparator(array[i], array[i + 1]) == false) {
                     temp = array[i];
                     array[i] = array[i+1];
                     array[i+1] = temp;
@@ -40,8 +39,8 @@ function sortArr( comparator, array ){
             }
         }
     }
-    result.push(sort);
-    return result;
+    sort(array);
+    return array;
 }
 
 /*A comparator takes two arguments and uses some algorithm to compare them. If the first argument is larger or greater than the 2nd it returns true, otherwise it returns false. Here is an example that works on integers*/
@@ -68,8 +67,8 @@ function yearComparator(auto1, auto2){
 /*This compares two automobiles based on their make. It should be case insensitive and makes which are alphabetically earlier in the alphabet are "greater" than ones that come later (from A-Z).*/
 function makeComparator(auto1, auto2){
     /* your code here*/
-    let x = auto1.make.toLowerCase();
-    let y = auto2.make.toLowerCase();
+    let x = auto1.make[0].toLowerCase();
+    let y = auto2.make[0].toLowerCase();
     if (x <= y) {return true;}   
     else { return false;}       
 }
@@ -118,13 +117,12 @@ As an example of the content in the parenthesis:
 
 console.log('*****');
 console.log('The cars sorted by year are:');
-let yearArr =sortArr(yearComparator, automobiles);
 function output(carArray) {
-    for(let car of carArray) {
+    for (car of carArray) 
         car.logMe(true);
-    }
-};
-output(yearArr);
+    
+}
+output(sortArr(yearComparator, automobiles));
 console.log('The cars sorted by make are:');
 output(sortArr(makeComparator, automobiles));
 console.log('The cars sorted by type are:');
