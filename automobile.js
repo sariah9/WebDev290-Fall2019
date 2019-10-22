@@ -123,8 +123,8 @@ function output(carArray) {
     for(let car of carArray) {
         car.logMe(true);
     }
-}
-output(sortArr(yearComparator, automobiles));
+};
+output(yearArr);
 console.log('The cars sorted by make are:');
 output(sortArr(makeComparator, automobiles));
 console.log('The cars sorted by type are:');
