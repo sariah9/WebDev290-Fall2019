@@ -5,9 +5,9 @@ function Automobile( year, make, model, type ){
     this.type = type; //string (ex. Pickup, SUV)
     this.logMe = function(expression) {
         if (expression === true) {
-            console.log(automobile.year+' '+automobile.make+' '+automobile.model+' '+automobile.type);
+            console.log(this.year+' '+this.make+' '+this.model+' '+this.type);
         } else {
-            console.log(automobile.year+' '+automobile.make+' '+automobile.model);   
+            console.log(this.year+' '+this.make+' '+this.model);   
         }
     };
 }
@@ -30,7 +30,7 @@ function sortArr( comparator, array ){
         let temp;
         while(!sorted) {
             sorted = true;
-            for (int i = 0; i < array.length - 1; i++) {
+            for (let i = 0; i < array.length - 1; i++) {
                 if (comparator(array[i], array[i + 1])) {
                     temp = array[i];
                     array[i] = array[i+1];
@@ -118,8 +118,11 @@ As an example of the content in the parenthesis:
 
 console.log('*****');
 console.log('The cars sorted by year are:');
-sortArr(yearComparator, automobiles);
-automobiles.logMe(true);
+let yearArr =sortArr(yearComparator, automobiles);
+for(car of yearArr) {
+car.logMe(true);
+}
+
 console.log('The cars sorted by make are:');
 sortArr(makeComparator, automobiles);
 automobiles.logMe(true);
