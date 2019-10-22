@@ -26,7 +26,7 @@ function sortArr( comparator, array ){
     /*your code here*/
     let result = [];
     let sort = function(array){
-        boolean sorted = false;
+        let sorted = false;
         let temp;
         while(!sorted) {
             sorted = true;
