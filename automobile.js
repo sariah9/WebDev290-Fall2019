@@ -120,7 +120,7 @@ console.log('*****');
 console.log('The cars sorted by year are:');
 let yearArr =sortArr(yearComparator, automobiles);
 function output(carArray) {
-    for(car of carArray) {
+    for(let car of carArray) {
         car.logMe(true);
     }
 }
