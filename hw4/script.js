@@ -4,8 +4,6 @@ let tableFill = [
   { "Header 1": "3,1", "Header 2": "3,2", "Header 3": "3,3", "Header 4":"3,4"  },
 ];
 
-let table = document.createElement("TABLE");
-
 function createTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -28,7 +26,7 @@ function createTable(table, data) {
   }
 }
 
-let table = document.querySelector("table");
+let table = document.createElement("TABLE");
 let data = Object.keys(tableFill[0]);
 createTable(table, tableFill); // generate the table first
 createTableHead(table, data); // then the head
