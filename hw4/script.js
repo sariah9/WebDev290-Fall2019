@@ -26,7 +26,7 @@ function createTable(table, data) {
   }
 }
 
-let table = document.createElement("TABLE");  /* or let table = document.querySelector("table");*/
+let table = document.getElementById("fourSquare");
 let data = Object.keys(tableFill[0]);
 createTable(table, tableFill); // generate the table first
 createTableHead(table, data); // then the head
