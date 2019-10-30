@@ -42,7 +42,7 @@ let createTable = function() {
 
   function appendButtons() {
      let body = document.body;
-     let labels = ["Left", "Up", "Right", "Down", "Mark Cell"];
+     let labels = ["Up", "Down", "Left", "Right", "Mark Cell"];
 
      for (let i = 0; i < labels.length; i++) {
         let button = document.createElement('button');
