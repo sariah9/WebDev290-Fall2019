@@ -1,45 +1,98 @@
-let tableFill = [
-  { "Header 1": "1,1", "Header 2": "1,2", "Header 3": "1,3", "Header 4":"1,4" },
-  { "Header 1": "2,1", "Header 2": "2,2", "Header 3": "2,3", "Header 4":"2,4"  },
-  { "Header 1": "3,1", "Header 2": "3,2", "Header 3": "3,3", "Header 4":"3,4"  },
-];
+let createTable = function() {
+  let column = 1;
+  let row = 1;
 
-function createTableHead(table, data) {
-  let thead = table.createTHead();
-  let row = thead.insertRow();
-  for (let key of data) {
-    let th = document.createElement("th");
-    let text = document.createTextNode(key);
-    th.appendChild(text);
-    row.appendChild(th);
+  function tableFill(func) {
+     let body = document.body;
+     let table = document.createElement('table');
+     let tableBody = document.createElement('tbody');
+
+     table.style.width = '75%';
+     table.setAttribute('border', '2');
+
+     for (let r = 0; r < 4; r++) {
+        let tr = document.createElement('tr');
+        for (let c = 0; c < 4; c++) {
+           if (r === 0) {
+              let th = document.createElement('th');
+              th.appendChild(document.createTextNode("Header " + (c + 1)));
+              tr.appendChild(th);
+           } else {
+              let td = document.createElement('td');
+              let label = (r) + "," + (c + 1);
+              td.appendChild(document.createTextNode(label));
+              td.setAttribute('id', label);
+              tr.appendChild(td);
+           }       
+        }
+        tableBody.appendChild(tr);
+     }
+     table.appendChild(tableBody);
+     body.appendChild(table);
+     
+     if (func) {
+        func();
+     }
   }
-}
 
-function createTable(table, data) {
-  for (let element of data) {
-    let row = table.insertRow();
-    for (key in element) {
-      let cell = row.insertCell();
-      let text = document.createTextNode(element[key]);
-      cell.appendChild(text);
-    }
+  function markCell() {
+     let cell = document.getElementById(row + "," + column);
+     cell.style.background = "yellow";
   }
-}
 
-let table = document.getElementById("fourSquare");
-let data = Object.keys(tableFill[0]);
-createTable(table, tableFill); // generate the table first
-createTableHead(table, data); // then the head
+  function appendButtons() {
+     let body = document.body;
+     let labels = ["Left", "Up", "Right", "Down", "Mark Cell"];
 
-let up = document.getElementById("upButton");
-let down = document.getElementById("downButton");
-let left = document.getElementById("leftButton");
-let right = document.getElementById("rightButton");
+     for (let i = 0; i < labels.length; i++) {
+        let button = document.createElement('button');
+        button.appendChild(document.createTextNode(labels[i]));
+        body.appendChild(button);
+        let dir = labels[i];
+        button.addEventListener("click", function(e) {
+            if (e.target.innerText !== "Mark Cell") {
+               moveCursor(e.target.innerText);
+            } else {
+               markCell();
+            }
+        });
+     }
+  }
 
-let markCell = document.getElementById("markButton");
-markCell.name = "Mark Cell";
-function changeCell(){
-  markCell.style.backgroundColor == "yellow";
-}
-markCell.addEventListener("click", changeCell);
-    
+  function moveCursor(dir) {
+     let cellName = row + "," + column;
+     let currCell = document.getElementById(cellName);
+     currCell.style.border = "1px solid black";
+
+     switch (dir) {
+       case "Up":
+          if (row !== 1) {
+             row--;
+          }
+          break;
+       case "Down":
+          if (row !== 3) {
+             row++;
+          }
+          break;
+       case "Left":
+          if (column !== 1) {
+             column--;
+          }
+          break;
+       case "Right":
+          if (column !== 4) {
+             column++;
+          }
+          break;
+     }
+
+     cellName = row + "," + column;
+     currCell = document.getElementById(cellName);
+     currCell.style.border = "3px solid black";
+  }
+
+  tableFill(appendButtons);
+};
+
+createTable();
