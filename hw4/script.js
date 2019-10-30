@@ -31,14 +31,15 @@ let data = Object.keys(tableFill[0]);
 createTable(table, tableFill); // generate the table first
 createTableHead(table, data); // then the head
 
-function changeCell(){
-  let markCell = document.getElementById("direction button");
-  markCell.style.backgroundColor == "yellow";
-}
 let up = document.getElementById("upButton");
 let down = document.getElementById("downButton");
 let left = document.getElementById("leftButton");
 let right = document.getElementById("rightButton");
 
-document.getElementById("markButton").addEventListener("click", changeCell);
+let markCell = document.getElementById("markButton");
+markCell.name = "Mark Cell";
+function changeCell(){
+  markCell.style.backgroundColor == "yellow";
+}
+markCell.addEventListener("click", changeCell);
     
