@@ -30,3 +30,10 @@ let table = document.getElementById("fourSquare");
 let data = Object.keys(tableFill[0]);
 createTable(table, tableFill); // generate the table first
 createTableHead(table, data); // then the head
+
+let up = document.getElementById("upButton");
+let down = document.getElementById("downButton");
+let left = document.getElementById("leftButton");
+let right = document.getElementById("rightButton");
+let markCell = document.getElementById("markButton");
+    
