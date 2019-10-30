@@ -22,6 +22,9 @@ let createTable = function() {
               let label = (r) + "," + (c + 1);
               td.appendChild(document.createTextNode(label));
               td.setAttribute('id', label);
+              if (r == 1 && c == 0) {
+                 td.style.border = "3px solid black";
+              }
               tr.appendChild(td);
            }       
         }
