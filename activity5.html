@@ -1,16 +1,4 @@
-/*<!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      var req = new XMLHttpRequest();
-      req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Seattle,wa&appid=fa7d80c48643dfadde2cced1b1be6ca1", false);
-      req.send(null);
-      console.log(JSON.parse(req.responseText));
-    </script>
-  </head>
-  <body>
-  </body>
-</html>
+/*
 
 <!DOCTYPE html>
 <html>
@@ -63,6 +51,16 @@
     <title>title</title>
   </head>
   <body>
-    <script type="text/javascript" src="script.js"></script>
+    <form action="http://api.openweathermap.org/data/2.5/weather?q={city name},{country code}" method="get">
+        City name: <input type="text" name="CityName" value="Seattle"><br>
+        Zip code: <input type="text" name="Zipcode" value="98115"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+      var req = new XMLHttpRequest();
+      req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Seattle,wa&appid=0e57c807a628d5e136b3138b7ad24c27", false);
+      req.send(null);
+      console.log(JSON.parse(req.responseText));
+    </script>
   </body>
 </html>
