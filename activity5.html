@@ -11,7 +11,7 @@
         document.getElementById('weatherSubmit').addEventListener('click', function(event){
           let zipC = document.getElementById('Zipcode').value;
           var req = new XMLHttpRequest();
-          req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + zipC + "us&appid=" + apiKey, false);
+          req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + zipC + ",us&appid=" + apiKey, false);
           req.send(null);
           console.log(JSON.parse(req.responseText));
         })
@@ -19,11 +19,11 @@
     </script>
   </head>
   <body>
-    <h2> You can use this form to inspect the weather via your zip code!</h2>
+    <h2> You can use this form to inspect the weather via your location!</h2>
     <form id="weatherForm" method="get">
         City name: <input type="text" name="CityName" value="Seattle"><br>
         Zip code: <input type="text" name="Zipcode" value="98115"><br><br>
-        <input type="submit" value="Search" id="weatherSubmit">>
+        <input type="submit" value="Search" id="weatherSubmit">
     </form>
 
   </body>
