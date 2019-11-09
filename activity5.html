@@ -20,7 +20,11 @@
           }
           req.open("GET", source, false);
           req.send(null);
-          console.log(JSON.parse(req.responseText));
+          let reply = JSON.parse(req.responseText);
+          document.getElementById("humidity").textContent = reply.main.humidity;
+          document.getElementById("wind").textContent = reply.wind.speed;
+          document.getElementById("temp").textContent = reply.main.temp;               
+          document.getElementById("sun").textContent = reply.sys.sunrise;
         })
       }
     </script>
