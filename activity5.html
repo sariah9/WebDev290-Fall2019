@@ -9,14 +9,16 @@
       document.addEventListener('DOMContentLoaded', weatherGet);
       function weatherGet(){
         document.getElementById('weatherSubmit').addEventListener('click', function(event){
-          var zipC = document.getElementById('zipcode').value;
-          var city = document.getElementById('cityName').value;
+          let zipC = document.getElementById('zipcode').value;
+          let city = document.getElementById('cityName').value;
+          let source;
           var req = new XMLHttpRequest();
           if(zipC == null){
-            req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&appid=" + apiKey, false);
+            source = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&appid=" + apiKey;
           } else {
-            req.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey, false);
+            source = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey;
           }
+          req.open("GET", source, false);
           req.send(null);
           console.log(JSON.parse(req.responseText));
         })
