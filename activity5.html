@@ -9,9 +9,14 @@
       document.addEventListener('DOMContentLoaded', weatherGet);
       function weatherGet(){
         document.getElementById('weatherSubmit').addEventListener('click', function(event){
-          let zipC = document.getElementById('Zipcode').value;
+          var zipC = document.getElementById('zipcode').value;
+          var city = document.getElementById('cityName').value;
           var req = new XMLHttpRequest();
-          req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + zipC + ",us&appid=" + apiKey, false);
+          if(zipC == null){
+            req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&appid=" + apiKey, false);
+          } else {
+            req.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey, false);
+          }
           req.send(null);
           console.log(JSON.parse(req.responseText));
         })
@@ -19,12 +24,13 @@
     </script>
   </head>
   <body>
-    <h2> You can use this form to inspect the weather via your location!</h2>
     <form id="weatherForm" method="get">
-        City name: <input type="text" name="CityName" value="Seattle"><br>
-        Zip code: <input type="text" name="Zipcode" id="Zipcode" value="98115"><br><br>
+      <legend> You can use this form to inspect the weather via your zip code!</legend>
+      <fieldset>
+        City name: <input type="text" name="cityName" id="cityName" value="Seattle"><br>
+        Zip code: <input type="text" name="zipcode" id="zipcode" value="98115"><br><br>
         <input type="submit" value="Search" id="weatherSubmit">
+      </fieldset>
     </form>
-
   </body>
 </html>
