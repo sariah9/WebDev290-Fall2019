@@ -19,12 +19,19 @@
             source = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey;
           }
           req.open("GET", source, false);
+          req.addEventListener('load', function(){
+            let reply = JSON.parse(req.responseText);
+            if (req.status > 200 && req.status < 400){
+              document.getElementById("weather").textContent = req.responseText;
+              document.getElementById("humidity").textContent = reply.main.humidity;
+              document.getElementById("wind").textContent = reply.wind.speed;
+              document.getElementById("temp").textContent = reply.main.temp;               
+              document.getElementById("sun").textContent = reply.sys.sunrise;
+            } else {
+              console.log(reply);
+            }
+          });
           req.send(null);
-          let reply = JSON.parse(req.responseText);
-          document.getElementById("humidity").textContent = reply.main.humidity;
-          document.getElementById("wind").textContent = reply.wind.speed;
-          document.getElementById("temp").textContent = reply.main.temp;               
-          document.getElementById("sun").textContent = reply.sys.sunrise;
         })
       }
     </script>
