@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      document.addEventListener('DOMContentLoaded', bindButtons);
+
+      function bindButtons(){
+        document.getElementById('urlSubmit').addEventListener('click', function(event){
+          var req = new XMLHttpRequest();
+          var payload = {dessert:null};
+          payload.dessert = document.getElementById('dessert').value;
+          req.open('POST', 'http://httpbin.org/post', true);
+          req.setRequestHeader('Content-Type', 'application/json');
+          req.send(JSON.stringify(payload));
+          var response = JSON.parse(req.responseText);
+          document.getElementById('favDessert').textContent = response.dessert;
+          event.preventDefault();
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Favorite Dessert!</legend>
+        <label for="dessert">Enter your favorite dessert: </label>
+        <input type="text" name="dessert" id="dessert"><br>
+        <input type="submit" value="Submit" id="button">
+      </fieldset>
+    </form>
+    <div>
+      <h2>Result</h2>
+      <ul>
+        <li><span>Your favorite desert is:</span><span id="favDessert"></span></li>
+      </ul>
+    </div>
+  </body>
+</html>
