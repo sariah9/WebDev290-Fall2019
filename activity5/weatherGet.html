@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Get Weather Form</title>
+  </head>
+  <body>
+    <form id="weatherForm" method="get">
+      <legend> You can use this form to inspect the weather via your location!</legend>
+      <fieldset>
+        City name: <input type="text" name="cityName" id="cityName" ><br>
+        Zip code: <input type="text" name="zipcode" id="zipcode" ><br><br>
+        <input type="submit" value="Search" id="weatherSubmit">
+      </fieldset>
+    </form>
+    <ul>
+        <li>City Name: <span id="city"></span></li>
+        <li>Weather: <span id="weather"></span></li>
+        <li>Forecast: <span id="foreC">Console</span></li>
+        <li>Humidity: <span id="humidity">Console</span></li>
+        <li>Wind Speed: <span id="wind">Console</span></li>
+        <li>Temperature: <span id="temp">Console</span></li>
+    </ul>
+    <script type="text/javascript" src="weather.js"></script>
+  </body>
+</html>
