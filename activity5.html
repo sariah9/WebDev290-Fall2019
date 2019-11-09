@@ -13,21 +13,21 @@
           let cityN = document.getElementById('cityName').value;
           let source;
           var req = new XMLHttpRequest();
-          if(zipC == null){
-            source = "http://api.openweathermap.org/data/2.5/weather?q=" + cityN + ",us&appid=" + apiKey;
-          } else {
+          if (zipC){
             source = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey;
-          }
+          } else {
+            source = "http://api.openweathermap.org/data/2.5/weather?q=" + cityN + ",us&appid=" + apiKey;
+          };
           req.open("GET", source, true);
           req.addEventListener('load', function(){
             let reply = JSON.parse(req.responseText);
             if (req.status > 200 && req.status < 400){
               document.getElementById('city').textContent = reply.city.name;
-              document.getElementById('weather').textContent = reply.list.weather.main;
-              document.getElementById('foreC').textContent = reply.list.weather.description;
-              document.getElementById('humidity').textContent = reply.list.main.humidity;
-              document.getElementById('wind').textContent = reply.list.wind.speed;
-              document.getElementById('temp').textContent = reply.list.main.temp;               
+              document.getElementById('weather').textContent = reply.weather.main;
+              document.getElementById('foreC').textContent = reply.weather.description;
+              document.getElementById('humidity').textContent = reply.main.humidity;
+              document.getElementById('wind').textContent = reply.wind.speed;
+              document.getElementById('temp').textContent = reply.main.temp;               
             } else {
               console.log(reply);
             }
@@ -42,8 +42,8 @@
     <form id="weatherForm" method="get">
       <legend> You can use this form to inspect the weather via your location!</legend>
       <fieldset>
-        City name: <input type="text" name="cityName" id="cityName" value="Seattle"><br>
-        Zip code: <input type="text" name="zipcode" id="zipcode" value="98115"><br><br>
+        City name: <input type="text" name="cityName" id="cityName" ><br>
+        Zip code: <input type="text" name="zipcode" id="zipcode" ><br><br>
         <input type="submit" value="Search" id="weatherSubmit">
       </fieldset>
     </form>
