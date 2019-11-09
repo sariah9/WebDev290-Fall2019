@@ -10,11 +10,11 @@
       function weatherGet(){
         document.getElementById('weatherSubmit').addEventListener('click', function(event){
           let zipC = document.getElementById('zipcode').value;
-          let city = document.getElementById('cityName').value;
+          let cityN = document.getElementById('cityName').value;
           let source;
           var req = new XMLHttpRequest();
           if(zipC == null){
-            source = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&appid=" + apiKey;
+            source = "http://api.openweathermap.org/data/2.5/weather?q=" + cityN + ",us&appid=" + apiKey;
           } else {
             source = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey;
           }
@@ -22,11 +22,12 @@
           req.addEventListener('load', function(){
             let reply = JSON.parse(req.responseText);
             if (req.status > 200 && req.status < 400){
-              document.getElementById("weather").textContent = req.responseText;
-              document.getElementById("humidity").textContent = reply.main.humidity;
-              document.getElementById("wind").textContent = reply.wind.speed;
-              document.getElementById("temp").textContent = reply.main.temp;               
-              document.getElementById("sun").textContent = reply.sys.sunrise;
+              document.getElementById('city').textContent = reply.city.name;
+              document.getElementById('weather').textContent = reply.list.weather.main;
+              document.getElementById('foreC').textContent = reply.list.weather.description;
+              document.getElementById('humidity').textContent = reply.list.main.humidity;
+              document.getElementById('wind').textContent = reply.list.wind.speed;
+              document.getElementById('temp').textContent = reply.list.main.temp;               
             } else {
               console.log(reply);
             }
@@ -48,18 +49,20 @@
     </form>
     <table>                                                          
       <tr>
+          <th>City Name:</th>
           <th>Weather:</th>
+          <th>Forecast:</th>
           <th>Humidity:</th>
           <th>Wind Speed:</th>
           <th>Temperature:</th>
-          <th>Sunrise:</th>
       </tr>
       <tr>
-          <td id="weather">Console</td>  
+          <td id="city">Console</td>
+          <td id="weather">Console</td>
+          <td id="foreC">Console</td>
           <td id="humidity">Console</td>
           <td id="wind">Console</td>
           <td id="temp">Console</td>
-          <td id="sun">Console</td>
         </tr>
     </table>
   </body>
