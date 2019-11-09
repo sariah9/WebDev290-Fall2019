@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      document.addEventListener('DOMContentLoaded', bindButtons);
-
-      function bindButtons(){
-        document.getElementById('urlSubmit').addEventListener('click', function(event){
-          var req = new XMLHttpRequest();
-          var payload = {dessert:null};
-          payload.dessert = document.getElementById('dessert').value;
-          req.open('POST', 'http://httpbin.org/post', true);
-          req.setRequestHeader('Content-Type', 'application/json');
-          req.send(JSON.stringify(payload));
-          var response = JSON.parse(req.responseText);
-          document.getElementById('favDessert').textContent = response.dessert;
-          event.preventDefault();
-        });
-      }
-    </script>
+     <meta charset="utf-8">
   </head>
   <body>
     <form>
@@ -34,5 +18,6 @@
         <li><span>Your favorite desert is:</span><span id="favDessert"></span></li>
       </ul>
     </div>
+    <script type="text/javascript" src="dessert.js"></script>
   </body>
 </html>
