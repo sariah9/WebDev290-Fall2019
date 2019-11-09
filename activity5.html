@@ -18,7 +18,7 @@
           } else {
             source = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipC + ",us&appid=" + apiKey;
           }
-          req.open("GET", source, false);
+          req.open("GET", source, true);
           req.addEventListener('load', function(){
             let reply = JSON.parse(req.responseText);
             if (req.status > 200 && req.status < 400){
