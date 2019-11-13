@@ -1,0 +1,14 @@
+<h1> GET Request Received. </h1>
+
+{{#if getQueryData.length}}
+
+    <h2>For the Get Form, you entered:</h2>
+    {{#each getQueryData}}
+      <ul>
+        <li><span>Name: {{this.name}}</span></li>
+        <li><span>Number: {{this.value}}</span></li>
+        <li><span>Email: {{this.email}}</span></li>
+      </ul>
+    {{/each}}
+
+{{/if}}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Post and Get Forms</title>
+</head>
+  <body>
+      <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="get" class="form-get">
+          <caption class="forms"> Some GET Data </caption>
+          <div class="form-get">
+              <label for="text_input">Name here: </label>
+              <input type="text" name="name_input"><br>
+          </div>
+          <div class="form-get">
+              <label for="numerical_input">Number here: </label>
+              <input type="number" name="numerical_input"><br>
+          </div>
+           <div class="form-get">
+              <label for="email_input">Email here: </label>
+              <input type="email" name="email_input"><br>
+          </div>
+          <div class="form-get">
+              <input type="submit" value="Submit" id="submit_get">
+          </div>
+      </form>
+      <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post" class="form-post">
+          <caption class="forms"> Some POST Data </caption>
+          <div class="form-get">
+              <label for="text_input">Name here: </label>
+              <input type="text" name="name_input"><br>
+          </div>
+          <div class="form-get">
+              <label for="numerical_input">Number here: </label>
+              <input type="number" name="numerical_input"><br>
+          </div>
+           <div class="form-get">
+              <label for="email_input">Email here: </label>
+              <input type="email" name="email_input"><br>
+          </div>
+          <div class="form-post">
+              <input type="submit" value="Submit" id="submit_post">
+          </div>
+      </form>
+      <ul>
+        <h1>{{status_get}}</h1>
+        <h2>For the Get Form, you entered:</h2>
+        <li><span>{{name_get}}</span></li>
+        <li><span>{{number_get}}</span></li>
+        <li><span>{{email_get}}</span></li>
+      </ul>
+      <ul>
+        <h1>{{status_post}}</h1>
+        <h2>For the Post Form, you entered:</h2>
+        <li><span>{{name_post}}</span></li>
+        <li><span>{{number_post}}</span></li>
+        <li><span>{{email_post}}</span></li>
+      </ul>
+      <script type="text/javascript" src="week8/app.js"></script>
+  </body>
+</html>

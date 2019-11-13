@@ -1,0 +1,14 @@
+<h1> POST Request Received. </h1>
+
+{{#if postQueryData.length}}
+
+    <h2>For the Post Form, you entered:</h2>
+    {{#each postQueryData}}
+      <ul>
+        <li><span>Name: {{this.name}}</span></li>
+        <li><span>Number: {{this.value}}</span></li>
+        <li><span>Email: {{this.email}}</span></li>
+      </ul>
+    {{/each}}
+
+{{/if}}

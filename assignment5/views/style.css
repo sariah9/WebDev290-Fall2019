@@ -1,0 +1,31 @@
+caption {
+    text-align: center;
+    caption-side: top;
+}
+
+form {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 20px;
+    width:80%;
+}
+
+caption.forms {
+    text-align: left;
+    caption-side: top;
+}
+
+div.form-get {
+    border: 1px solid rgb(190, 190, 190);
+    background-color: white;
+    margin: auto;
+    text-align: left;
+    padding: 10px;
+}
+
+div.form-post {
+    border: 1px solid rgb(190, 190, 190);
+    background-color: white;
+    margin: auto;
+    text-align: left;
+    padding: 10px;
+}
