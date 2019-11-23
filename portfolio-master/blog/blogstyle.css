@@ -89,6 +89,7 @@ main span { font-weight: bold;
 /*****article****/
 article img { width: 850px;
   height: auto;
+  border: 1px solid rgb(236,120,152);
 }
 
 /*****footer*****/
