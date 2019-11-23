@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title> All Things Sariah </title>
+     <link type="text/css" rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/main.css">
+     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div id="full-width">
+        <section id="siteName">
+          <h1> Sariah<img src="img/titleLogo.png" alt="logo">Bunnell </h1>
+        </section>
+      </div>
+      <div id="full-width">
+        <section id="navBar">
+          <nav>
+            <ul>
+              <li><a href=#home> Home</a></li>
+              <li><a href=#about> About</a></li>
+              <li><a href="work/workpage.html"> Work</a></li>
+              <li><a href=#contact> Contact</a></li>
+              <li><a href="blog/blogpage.html"> Blog</a></li>
+            </ul>                                     
+          </nav> 
+        </section>
+      </div>
+    </header>
+    <main> 
+      <aside>  
+        <div class="carousel">
+          <button class="carousel_button carousel_button--left is-hidden"> 
+          <img src="img/left.png" alt="licon">
+          </button>
+          <div class="carousel_track-container">
+            <ul class="carousel_track">
+              <li class="carousel_slide current-slide">
+                <img class="carousel_image" src="img/wolfMask2.png" alt="elephant">
+              </li>
+              <li class="carousel_slide">
+                <img class="carousel_image" src="img/rhinoMask2.png" alt="rhino">
+              </li>
+              <li class="carousel_slide">
+                <img class="carousel_image" src="img/owlMask2.png" alt="owl">
+              </li>
+              <li class="carousel_slide">
+                <img class="carousel_image" src="img/elephantMask2.png" alt="wolf">
+              </li>
+              <li class="carousel_slide">
+                <img class="carousel_image" src="img/zebraMask2.png" alt="zebra">
+              </li>
+            </ul>
+          </div>
+          <button class="carousel_button carousel_button--right">
+          <img src="img/right.png" alt="ricon">    
+          </button>
+          <div class="carousel_nav">
+            <button class="carousel_indicator current-slide"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
+          </div>
+        </div> 
+      </aside>
+      <div id="spacer"></div>
+       <div class="full-width" id="intro"> 
+         <div id="about"> 
+           <h2> About Me </h2>
+           <p>Hi, I'm Sariah. I was an art major <br>
+            before I became a CS major. <br>
+            After 5 years of false career starts, <br>
+            I began taking online classes in <br>
+            web development.</p>  
+           <p>My introduction to Javascript made me <br>
+            want to learn programming full-time.<br>
+            The idea that I could mix innovative <br>
+            technology with a creative mindset <br>
+            inspired me to pursue software engineering <br> 
+            as a career.</p>
+           <p>When I'm not learning programming, I am a <br>
+            wife, a dog mom, and a world traveller. I <br>
+            love all creative outlets like woodworking, <br>
+            painting, sewing, and pottery. I enjoy <br>
+            eating and exercising. I also love hiking, <br>
+            learning new words, and doing puzzles.</p>
+           <p>I grew up in Ohio as the youngest of <br>
+            five children. I went to University in Utah. <br>
+            Now I live near Seattle with my huband and <br>
+            our dog, Kiba, and I am back in school at <br>
+            Oregon State University.</p>
+           <p>Feel free to:</p> 
+           <a href="work/workpage.html"><p>peruse my work,</p></a>  
+           <a href="blog/blogpage.html"><p> view my travel blog,</p></a> 
+           <a href="#contact"><p> or contact me.</p></a>   
+         </div>   
+         <div class="right-side">   
+           <section id="me">       
+             <img src="img/aboutMe.png" alt="Me">   
+           </section>   
+         </div>
+       </div>
+     </main>     
+     <footer>     
+       <div class="half-width">     
+         <section id="contact">   
+           <h2> Contact Me </h2>
+           <h3> Let me know if you have any questions or comments.</h3> 
+           <ul> 
+             <li><h3>Email: <span>query@madebysariah.com </span></h3></li>           
+             <li><h3>Phone: <span>(435) 374-4795 </span></h3></li>  
+             <li><h3>Or feel free to contact me via any of the links below!</h3></li> 
+           </ul>    
+         </section>     
+       </div>  
+       <div class="half-width">
+         <section id="getForm">
+          <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php " method="get">
+             <caption>Let me know if you're interested </caption>
+          <div class="submission">
+              <label for="personName">Your Name: </label>
+              <input type="text" name="personName" id="personName"><br>
+          </div>
+          <div class="submission">
+              <label for="companyName">Company Name: </label>
+              <input type="text" name="companyName" id="companyName"><br>
+          </div>
+          <div class="submission">
+              <label for="phone">Number here: </label>
+              <input type="number" name="phone" id="phone"><br>
+          </div>
+          <div class="submission">
+            <label for="candy">Select between: </label><br>
+            <input type="radio" name="interest" value="hot" checked> I think you have the perfect skills for the job!<br>
+            <input type="radio" name="interest" value="warmer"> We are looking for someone else. <br>
+            <input type="radio" name="interest" value="cool"> I'm not hiring. I just want a friend.
+          </div>
+          <div class="submission">
+              <input type="submit" value="Submit">
+          </div>
+          </form>
+         </section>
+       </div>   
+       <div class="full-width">    
+         <ul id="socialmedia">
+           <li><a href="https://www.twitter.com/sariahbunnell"><img src="img/twitter.png" alt="Twitter"></a></li>
+           <li><a href="https://www.instagram.com/sariahbunnell/"><img src="img/instagram.png" alt="Instagram"></a></li>
+           <li><a href="https://www.facebook.com/sariah.bunnell"><img src="img/facebook.png" alt="Facebook"></a></li>
+           <li><a href="https://www.github.com/sariah9"><img src="img/github.png" alt="Github"></a></li>
+           <li><a href="https://www.tumblr.com/blog/cruscapottery"><img src="img/tumblr.png" alt="Tumblr"></a></li>
+           <li><a href="https://www.behance.net/sariah9"><img src="img/behance.png" alt="Behance"></a></li>
+           <li><a href="https://www.pinterest.com/sariah9/"><img src="img/pinterest.png" alt="Pinterest"></a></li>
+           <li><a href="https://www.linkedin.com/in/sariah-bunnell-0b0a0bb5/"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
+         </ul>           
+       </div>     
+     </footer> 
+    <script type="text/javascript" src="enhance.js">
+   </script>     
+  </body>      
+</html>
