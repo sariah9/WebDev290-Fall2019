@@ -33,7 +33,7 @@ slides[2].style.left = slideWidth * 2 + 'px';
 */
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
-});
+};
 slides.forEach(setSlidePosition);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
@@ -78,7 +78,7 @@ dotsNav.addEventListener('click', e=> {
   const currentSlide = track.querySelector('.current-slide');
   const currentDot = dotsNav.querySelector('.current-slide');
   const targetIndex = dots.findIndex(dot => dot === targetDot);
-  cont targetSlide = slides[targetIndex];
+  const targetSlide = slides[targetIndex];
 
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
