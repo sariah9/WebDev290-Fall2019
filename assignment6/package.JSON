@@ -1,0 +1,17 @@
+{
+  "name": "Assignment6_database",
+  "version": "1.0.0",
+  "description": "practice with single web app for database and mySQL",
+  "main": "exerciseLog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sariah Bunnell",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.8.0"
+  }
+}
