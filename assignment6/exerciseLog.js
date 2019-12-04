@@ -122,7 +122,7 @@ app.get('/editWorkout',function(req, res, next){
 
 app.get('/editReturn',function(req,res,next){
   var context = {};
-  pool.query("SELECT * FROM workoutLog WHERE id=?", 
+  pool.query("SELECT * FROM `workoutLog` WHERE id=?", 
   [req.query.id], function(err, result){
     if(err){
       next(err);
@@ -130,7 +130,7 @@ app.get('/editReturn',function(req,res,next){
     }
     if(result.length == 1){
       var curVals = result[0];
-      pool.query("UPDATE workoutLog SET name=?, reps=?, weight=?, date=?, lbs=? WHERE id=?',
+      pool.query("UPDATE `workoutLog` SET name=?, reps=?, weight=?, date=?, lbs=? WHERE id=?',
         [req.query.name || curVals.name, 
          req.query.reps || curVals.reps, 
          req.query.weight || curVals.weight,
@@ -142,7 +142,7 @@ app.get('/editReturn',function(req,res,next){
             next(err);
             return;
           }
-        pool.query('SELECT * FROM `workouts`', function(err, rows, fields){     
+        pool.query('SELECT * FROM `workoutLog`', function(err, rows, fields){     
           if(err){
             next(err);
             return;
