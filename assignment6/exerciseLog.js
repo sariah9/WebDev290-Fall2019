@@ -68,7 +68,7 @@ app.get('/',function(req,res,next){
 
 app.get('/insert',function(req,res,next){
   var context = {};
-  pool.query("INSERT INTO workoutLog (`name`, `reps`, `weight`, `date`, `pounds`) VALUES (?, ?, ?, ?, ?)", 
+  pool.query("INSERT INTO `workoutLog` (`name`, `reps`, `weight`, `date`, `pounds`) VALUES (?, ?, ?, ?, ?)", 
     [req.query.name,
      req.query.reps,
      req.query.weight,
