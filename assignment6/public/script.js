@@ -1,5 +1,5 @@
 document.getElementById('exerciseButton').addEventListener('click',function(event){     	
-  var addWorkout = document.getElementById("entryForm");              
+  var entryForm = document.getElementById("entryForm");              
   var req = new XMLHttpRequest();
   var arg = "name="+entryForm.elements.name.value +    //parameters for get request.
     "&reps="+entryForm.elements.reps.value+
