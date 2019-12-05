@@ -1,0 +1,19 @@
+<h2>Update your exercise here:</h2>
+<form action="/editWorkout">
+  <label for="name">Workout Name:</label>
+  <input type="text" name="name" id="name" value="{{results.name}}">
+  <label for="reps">Number of Reps:</label>
+  <input type="number" name="reps" id="reps" value="{{results.reps}}"><br>
+  <label for="weight">Weight:</label>
+  <input type="number" name="weight" id="weight" value="{{results.weight}}"><br>
+  <label for="date">Date in Month-Day-Year: </label>
+  <input type="date" name="date" id="date" value="{{results.date}}"><br>
+  <label for="unit">Units:</label>
+  {{#if results.pounds}}
+    <input type="checkbox" name="unit" id="unit" checked><br>
+    {{else}}	
+    <input type="checkbox" name="unit" id="unit"><br>
+  {{/if}}
+  <input type="hidden" name="id" value={{results.id}}>
+  <a href="/update?id={{results.id}}"><input type="button" value="Save" id="editButton"></a>
+</form>
